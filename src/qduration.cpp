@@ -1,12 +1,7 @@
-#include "qduration.h"
+#include <QDuration>
 
-#define YEAR_SECONDS 31536000 // 365 days
-#define MONTH_SECONDS 2592000 // 30 days
-#define DAY_SECONDS 86400
-#define HOUR_SECONDS 3600
-#define MINUTE_SECONDS 60
+Q_DURATION_BEGIN_NAMESPACE
 
-namespace QtDuration {
 QDebug operator<<(QDebug dbg, const QDuration &duration)
 {
     dbg.nospace() << "QDuration("
@@ -241,4 +236,4 @@ QTime QDuration::getTime() const
     return time_;
 }
 
-} // namespace QtDuration
+Q_DURATION_END_NAMESPACE
