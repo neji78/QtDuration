@@ -24,7 +24,7 @@ target_compile_definitions(QtDuration PRIVATE QDURATION_LIBRARY)
 target_link_libraries(QtDuration PRIVATE Qt6::Core Qt6::Qml)
 
 target_include_directories(QtDuration PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/QDuration>
     $<INSTALL_INTERFACE:include>
 )
 
